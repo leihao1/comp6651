@@ -1,2 +1,2 @@
-# comp6651
-Algorithm Design Techniques
+# comp6651 Algorithm Design Techniques
+labs & homeworks & projects
