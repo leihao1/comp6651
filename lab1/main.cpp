@@ -10,11 +10,12 @@ int main(int arg,char* argv[]){
 	}
 
 	ifstream inf(argv[1]);
-	ofstream outf(argv[2]);
 	if (!inf){
 		cout<<"Input File Missing: please enter an input file\n";
 		return -1;
 	}
+
+	ofstream outf(argv[2]);
 	if (!outf){
 		cout<<"Output File Missing: please enter an output file\n";
 		return -1;
@@ -28,14 +29,15 @@ int main(int arg,char* argv[]){
 		}
 
 	for (int i=0;i<N;++i){
-		int M=0;//number of integers in the a set
+		int M=0;//number of elements in each dataset
 		inf>>M;
+
 		if(M==0){
 			outf<<"EMPTY\n";
 		}else{
 			int max;
 			inf>>max;//assume the first elements is the maximum element
-			int count=1;//how many times the maximum appeared
+			int count=1;//how many times the maximum element appears
 			int next;//next element
 
 			for(int i=0;i<M-1;i++){
